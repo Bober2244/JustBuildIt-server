@@ -7,7 +7,7 @@ import java.time.LocalDate
 
 object Bid: Table() {
     val bidId: Column<Int> = integer("bidId").autoIncrement()
-    val customerId: Column<Int> = integer("customerId")
+    val customerId: Column<Int> = integer("customerId").references(Customer.customerId)
     val bidDate: Column<LocalDate> = date("bidDate")
     val constructionPeriod: Column<Int> = integer("constructionPeriod")
 

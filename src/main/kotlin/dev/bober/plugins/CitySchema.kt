@@ -1,4 +1,4 @@
-package com.example.plugins
+package dev.bober.plugins
 
 import kotlinx.coroutines.*
 import kotlinx.serialization.Serializable

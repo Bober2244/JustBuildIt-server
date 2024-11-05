@@ -1,6 +1,6 @@
-package com.example
+package dev.bober
 
-import com.example.plugins.*
+import dev.bober.plugins.configureRouting
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*

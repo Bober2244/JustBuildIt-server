@@ -1,4 +1,4 @@
-package com.example.plugins
+package dev.bober.plugins
 
 import io.ktor.server.application.*
 import io.ktor.server.plugins.swagger.*

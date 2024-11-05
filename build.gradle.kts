@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.21"
+    alias(libs.plugins.kotlinx.serialization)
+    //id("org.jetbrains.kotlin.plugin.serialization") version "2.0.21"
 }
 
-group = "com.example"
+group = "dev.bober"
 version = "0.0.1"
 
 application {
-    mainClass.set("com.example.ApplicationKt")
+    mainClass.set("dev.bober.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
@@ -27,6 +28,7 @@ dependencies {
     implementation(libs.ktor.server.auth)
     implementation(libs.exposed.core)
     implementation(libs.exposed.jdbc)
+    implementation(libs.exposed.java.time)
     implementation(libs.ktor.server.swagger)
     implementation(libs.ktor.server.netty)
     implementation(libs.logback.classic)
